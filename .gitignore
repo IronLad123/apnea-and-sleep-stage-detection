@@ -1,0 +1,51 @@
+# Virtual Environment
+psg_env/
+env/
+venv/
+.venv/
+
+# Raw PhysioNet PSG-IPA Dataset (2.6 GB - download from PhysioNet)
+psg-ipa-a-polysomnographic-inter-scorer-performance-assessment-database-1.0.0/
+EEG_arousals
+Limb_movements
+Resp_events
+Sleep_stages
+
+# Python / Caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Jupyter
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Model weights
+*.pt
+*.pth
+
+# OS metadata
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

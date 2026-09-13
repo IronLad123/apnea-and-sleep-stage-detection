@@ -1,0 +1,107 @@
+{
+  "SN1": {
+    "EEG_central": "EEG Cz-M1",
+    "timestamp": "2026-09-09T17:56:31.875635",
+    "all_channels": {
+      "eeg": "EEG Cz-M1",
+      "eog": [
+        "EOG E1-M2",
+        "EOG E2-M2"
+      ],
+      "emg_chin": "EMG chin",
+      "emg_lat": "EMG LAT",
+      "emg_rat": "EMG RAT",
+      "ecg": "ECG",
+      "resp": [
+        "Resp nasal",
+        "Resp chest",
+        "Resp abdomen"
+      ],
+      "sao2": "SaO2"
+    }
+  },
+  "SN2": {
+    "EEG_central": "EEG C4-M1",
+    "timestamp": "2026-09-09T17:56:35.293182",
+    "all_channels": {
+      "eeg": "EEG C4-M1",
+      "eog": [
+        "EOG E1-M2",
+        "EOG E2-M2"
+      ],
+      "emg_chin": "EMG chin",
+      "emg_lat": "EMG LAT",
+      "emg_rat": "EMG RAT",
+      "ecg": "ECG",
+      "resp": [
+        "Resp nasal",
+        "Resp chest",
+        "Resp abdomen"
+      ],
+      "sao2": "SaO2"
+    }
+  },
+  "SN3": {
+    "EEG_central": "EEG C4-M1",
+    "timestamp": "2026-09-09T17:56:41.742750",
+    "all_channels": {
+      "eeg": "EEG C4-M1",
+      "eog": [
+        "EOG E1-M2",
+        "EOG E2-M2"
+      ],
+      "emg_chin": "EMG chin",
+      "emg_lat": "EMG LAT",
+      "emg_rat": "EMG RAT",
+      "ecg": "ECG",
+      "resp": [
+        "Resp nasal",
+        "Resp chest",
+        "Resp abdomen"
+      ],
+      "sao2": "SaO2"
+    }
+  },
+  "SN4": {
+    "EEG_central": "EEG C4-M1",
+    "timestamp": "2026-09-09T17:56:50.796742",
+    "all_channels": {
+      "eeg": "EEG C4-M1",
+      "eog": [
+        "EOG E1-M2",
+        "EOG E2-M2"
+      ],
+      "emg_chin": "EMG chin",
+      "emg_lat": "EMG LAT",
+      "emg_rat": "EMG RAT",
+      "ecg": "ECG",
+      "resp": [
+        "Resp nasal",
+        "Resp chest",
+        "Resp abdomen"
+      ],
+      "sao2": "SaO2"
+    }
+  },
+  "SN5": {
+    "EEG_central": "EEG C4-M1",
+    "timestamp": "2026-09-09T17:56:55.826997",
+    "all_channels": {
+      "eeg": "EEG C4-M1",
+      "eog": [
+        "EOG E1-M2",
+        "EOG E2-M2"
+      ],
+      "emg_chin": "EMG chin",
+      "emg_lat": "EMG LAT",
+      "emg_rat": "EMG RAT",
+      "ecg": "ECG",
+      "resp": [
+        "Resp nasal",
+        "Resp chest",
+        "Resp abdomen"
+      ],
+      "sao2": "SaO2"
+    }
+  }
+}
