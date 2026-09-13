@@ -1,4 +1,4 @@
-# Multimodal Polysomnography (PSG) Sleep Staging & Apnea Detection System
+# Apnea and Sleep Stage Detection System
 
 A clinically grounded, multi-modal machine learning pipeline for **5-class sleep staging** ($\text{Wake}, \text{N1}, \text{N2}, \text{N3}, \text{REM}$) and **sleep apnea detection** on the PhysioNet PSG-IPA database. Evaluated under strict **Leave-One-Subject-Out (LOSO)** cross-validation with zero patient data leakage.
 
