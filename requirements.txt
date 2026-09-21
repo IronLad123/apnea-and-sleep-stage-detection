@@ -1,0 +1,31 @@
+# ======================================================
+# Apnea & Sleep Stage Detection — Python Dependencies
+# Python 3.11+
+# Install: pip install -r requirements.txt
+# ======================================================
+
+# Core Scientific Stack
+numpy==2.3.5
+scipy==1.15.2
+pandas==2.3.1
+pyarrow==21.0.0
+
+# EEG / Biosignal Processing
+mne==1.12.1
+
+# Machine Learning
+scikit-learn==1.7.2
+lightgbm==4.6.0
+xgboost==3.1.1
+imbalanced-learn==0.14.1
+
+# Explainability
+shap==0.49.1
+
+# Visualization
+matplotlib==3.11.1
+seaborn==0.13.2
+
+# Notebook Support
+jupyter
+ipykernel
