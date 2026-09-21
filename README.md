@@ -46,25 +46,25 @@ Every result below is evaluated **subject-out** (train on 4 subjects, test on th
 | Apnea consensus AUC-ROC (pooled) | **0.512** (up from 0.249 on single-scorer labels) |
 | Apnea prevalence recovered via 12-scorer consensus | **816 / 5,126 epochs (15.9%)**, vs. 237 (4.6%) single-scorer |
 
-Full per-subject and per-phase numbers are logged in **[output.md](output.md)**.
+Full per-subject and per-phase numbers are logged in **[docs/output.md](docs/output.md)**.
 
 ![Final Benchmark Dashboard](results/final_dashboard.png)
 
 ## Repository Structure
 
 ```
-├── 07_Final_Benchmark.ipynb        # 🏆 Master reproducible benchmark notebook
-├── psg_analysis.ipynb              # Signal 1: Central EEG exploration & baseline
-├── 02_EOG_Sleep_Staging.ipynb      # Signal 2: EOG ocular dynamics & saccades
-├── 03_EMG_Staging.ipynb            # Signal 3: Submental EMG atonia analysis
-├── 04_ECG_Staging.ipynb            # Signal 4: ECG heart rate variability (HRV)
+├── notebooks/07_Final_Benchmark.ipynb        # 🏆 Master reproducible benchmark notebook
+├── notebooks/01_EEG_Staging.ipynb              # Signal 1: Central EEG exploration & baseline
+├── notebooks/02_EOG_Staging.ipynb      # Signal 2: EOG ocular dynamics & saccades
+├── notebooks/03_EMG_Staging.ipynb            # Signal 3: Submental EMG atonia analysis
+├── notebooks/04_ECG_Staging.ipynb            # Signal 4: ECG heart rate variability (HRV)
 │
-├── presentation.pptx / .html       # 9-slide executive presentation
+├── docs/presentation/presentation.pptx / .html       # 9-slide executive presentation
 │
-├── brain.md                        # Live project knowledge base & phase log
-├── output.md                       # Full numerical benchmark log
-├── implementation_plan.md          # Engineering implementation plan
-├── psg_staging_apnea_master_prompt.md  # Master spec (source of truth)
+├── docs/brain.md                        # Live project knowledge base & phase log
+├── docs/output.md                       # Full numerical benchmark log
+├── docs/implementation_plan.md          # Engineering implementation plan
+├── docs/master_prompt.md  # Master spec (source of truth)
 │
 ├── psg_utils/                      # Shared infrastructure package
 ├── features/                       # Per-signal Parquet feature caches
@@ -78,10 +78,10 @@ Full per-subject and per-phase numbers are logged in **[output.md](output.md)**.
 ### Core documents
 | File | Purpose |
 |---|---|
-| [brain.md](brain.md) | Living project state — phase-by-phase log, findings, gotchas |
-| [output.md](output.md) | Canonical results log — every benchmark table in this README is sourced from here |
-| [psg_staging_apnea_master_prompt.md](psg_staging_apnea_master_prompt.md) | Master engineering spec — ground-truth contracts, per-notebook feature tables |
-| [implementation_plan.md](implementation_plan.md) | Original phased implementation plan and open engineering questions |
+| [docs/brain.md](docs/brain.md) | Living project state — phase-by-phase log, findings, gotchas |
+| [docs/output.md](docs/output.md) | Canonical results log — every benchmark table in this README is sourced from here |
+| [docs/master_prompt.md](docs/master_prompt.md) | Master engineering spec — ground-truth contracts, per-notebook feature tables |
+| [docs/implementation_plan.md](docs/implementation_plan.md) | Original phased implementation plan and open engineering questions |
 
 ### Shared infrastructure — [`psg_utils/`](psg_utils/)
 | Module | Responsibility |
@@ -114,16 +114,16 @@ Each physiological signal gets its own notebook — feature extraction, EDA, LOS
 
 | # | Signal | Notebook | Features | Best standalone Macro F1 / κ |
 |---|---|---|---|---|
-| 1 | EEG (Cz/C4) | [psg_analysis.ipynb](psg_analysis.ipynb) | 25 | 45.6% / 0.41 (strongest single modality) |
-| 2 | EOG (E1, E2) | [02_EOG_Sleep_Staging.ipynb](02_EOG_Sleep_Staging.ipynb) | 34 | 57.54% / — (GRU, seq=5) |
-| 3 | EMG (chin + leg) | [03_EMG_Staging.ipynb](03_EMG_Staging.ipynb) | 13 | 23.48% / 0.124 — REM atonia signal only, not full staging |
-| 4 | ECG / HRV | [04_ECG_Staging.ipynb](04_ECG_Staging.ipynb) | 10 | 16.0% / 0.02 — 30s epochs too short for frequency-domain HRV |
-| 5 | Respiration + SaO₂ | *(dual-purpose; see [master prompt §7](psg_staging_apnea_master_prompt.md#7-notebook-5--respiration--sao2--05_resp_sao2_stagingipynb-dual-purpose))* | 12 | Weakest staging signal, but primary apnea driver |
-| — | **Fusion (final)** | [07_Final_Benchmark.ipynb](07_Final_Benchmark.ipynb) | 74–141 (static → temporal) | **57.54% / 0.5017** |
+| 1 | EEG (Cz/C4) | [notebooks/01_EEG_Staging.ipynb](notebooks/01_EEG_Staging.ipynb) | 25 | 45.6% / 0.41 (strongest single modality) |
+| 2 | EOG (E1, E2) | [notebooks/02_EOG_Staging.ipynb](notebooks/02_EOG_Staging.ipynb) | 34 | 57.54% / — (GRU, seq=5) |
+| 3 | EMG (chin + leg) | [notebooks/03_EMG_Staging.ipynb](notebooks/03_EMG_Staging.ipynb) | 13 | 23.48% / 0.124 — REM atonia signal only, not full staging |
+| 4 | ECG / HRV | [notebooks/04_ECG_Staging.ipynb](notebooks/04_ECG_Staging.ipynb) | 10 | 16.0% / 0.02 — 30s epochs too short for frequency-domain HRV |
+| 5 | Respiration + SaO₂ | *(dual-purpose; see [master prompt §7](docs/master_prompt.md#7-notebook-5--respiration--sao2--05_resp_sao2_stagingipynb-dual-purpose))* | 12 | Weakest staging signal, but primary apnea driver |
+| — | **Fusion (final)** | [notebooks/07_Final_Benchmark.ipynb](notebooks/07_Final_Benchmark.ipynb) | 74–141 (static → temporal) | **57.54% / 0.5017** |
 
-> Early exploratory notebooks for Resp+SaO₂ staging and a first BiGRU fusion pass (documented in [brain.md](brain.md)) were superseded once the pipeline moved to a scripted LightGBM workflow ([`run_phase4_fixed.py`](scripts/run_phase4_fixed.py), [`run_temporal_lgbm.py`](scripts/run_temporal_lgbm.py)) — that's what [07_Final_Benchmark.ipynb](07_Final_Benchmark.ipynb) reproduces end-to-end.
+> Early exploratory notebooks for Resp+SaO₂ staging and a first BiGRU fusion pass (documented in [docs/brain.md](docs/brain.md)) were superseded once the pipeline moved to a scripted LightGBM workflow ([`run_phase4_fixed.py`](scripts/run_phase4_fixed.py), [`run_temporal_lgbm.py`](scripts/run_temporal_lgbm.py)) — that's what [notebooks/07_Final_Benchmark.ipynb](notebooks/07_Final_Benchmark.ipynb) reproduces end-to-end.
 
-**Ground-truth contract:** every stage metric is reported against *both* the hard majority-vote label and the soft 12-scorer KL-consensus target — they're never averaged together. Apnea labels are a single fixed ground truth (event-overlap or multi-scorer consensus), never blended with the stage κ. Full contract in the [master prompt, §0](psg_staging_apnea_master_prompt.md#0-ground-truth-contract-implement-before-any-modeling).
+**Ground-truth contract:** every stage metric is reported against *both* the hard majority-vote label and the soft 12-scorer KL-consensus target — they're never averaged together. Apnea labels are a single fixed ground truth (event-overlap or multi-scorer consensus), never blended with the stage κ. Full contract in the [master prompt, §0](docs/master_prompt.md#0-ground-truth-contract-implement-before-any-modeling).
 
 ## Apnea Detection Engine
 
@@ -144,7 +144,7 @@ Each physiological signal gets its own notebook — feature extraction, EDA, LOS
 | SN5 | Severe (22.0) | 128/890 | 0.505 | 0.218 |
 | **Pooled** | — | **816/5,126** | **0.512** | **0.251** |
 
-Full logic and results: [output.md §2](output.md), consensus rules in [master prompt §0 & §9](psg_staging_apnea_master_prompt.md).
+Full logic and results: [docs/output.md §2](docs/output.md), consensus rules in [master prompt §0 & §9](docs/master_prompt.md).
 
 ## Explainability & Feature Importance
 
@@ -184,11 +184,11 @@ Chart: [`modality_ablation.png`](results/modality_ablation.png)
 | Respiration + SaO₂ | 12 | Regular → N3, irregular → REM, ≥90% drop → apnea |
 | **Total** | **94** | Full dual-task clinical coverage |
 
-*(A subset of 17 zero-variance features identified during Phase 1 auditing were later dropped from the production feature set — see [brain.md](brain.md) for the pruned per-signal counts.)*
+*(A subset of 17 zero-variance features identified during Phase 1 auditing were later dropped from the production feature set — see [docs/brain.md](docs/brain.md) for the pruned per-signal counts.)*
 
 ## Engineering Principles
 
-From [brain.md](brain.md)'s "golden rules," enforced across every notebook and script:
+From [docs/brain.md](docs/brain.md)'s "golden rules," enforced across every notebook and script:
 - **LOSO only** — never a shuffled `train_test_split` on pooled epochs; every split runs `assert len(train_subjects & test_subjects) == 0` via [`splits.py`](psg_utils/splits.py).
 - **Both label targets, always** — hard-vote and soft-KL stage metrics are reported side by side, never averaged.
 - **Stage ≠ apnea metrics** — their κ/F1 are never blended into one number.
@@ -212,7 +212,7 @@ From [brain.md](brain.md)'s "golden rules," enforced across every notebook and s
    ```
 4. **Explore interactively**
    ```bash
-   jupyter notebook 07_Final_Benchmark.ipynb
+   jupyter notebook notebooks/07_Final_Benchmark.ipynb
    ```
 
 ## Clinical Insights & Roadmap
@@ -220,7 +220,7 @@ From [brain.md](brain.md)'s "golden rules," enforced across every notebook and s
 - **SN5 distribution shift** — 74% of the night scored Wake, skewing the population prior; transductive class-prior reweighting recovered +4.2% F1, but subject-level domain adaptation is needed for high-arousal patients.
 - **SN4 REM failure** — submental EMG electrode degradation caused near-zero REM F1; falling back to EOG saccade correlation when EMG SNR degrades resolves it.
 - **Apnea screening works best on moderate–severe patients today** (SN3: F1 = 0.425); mild cases likely need a 5-minute sliding window or continuous AHI regression instead of 30s binary epochs.
-- **Next milestone:** scale from the current 5-subject cohort to the full 20-subject PSG-IPA set, and evaluate against all 12 individual scorers' κ (target ≥0.75 — the human inter-scorer band) per [master prompt §9](psg_staging_apnea_master_prompt.md#9-notebook-7--multi-scorer-benchmark--07_multi_scorer_benchmarkipynb).
+- **Next milestone:** scale from the current 5-subject cohort to the full 20-subject PSG-IPA set, and evaluate against all 12 individual scorers' κ (target ≥0.75 — the human inter-scorer band) per [master prompt §9](docs/master_prompt.md#9-notebook-7--multi-scorer-benchmark--07_multi_scorer_benchmarkipynb).
 
 ## Dataset & Citation
 

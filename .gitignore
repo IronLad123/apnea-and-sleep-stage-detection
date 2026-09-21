@@ -4,31 +4,21 @@ env/
 venv/
 .venv/
 
-# Raw PhysioNet PSG-IPA Dataset (2.6 GB - download from PhysioNet)
+# Raw PhysioNet PSG-IPA Dataset (2.6 GB — download from PhysioNet)
 psg-ipa-a-polysomnographic-inter-scorer-performance-assessment-database-1.0.0/
 EEG_arousals
 Limb_movements
 Resp_events
 Sleep_stages
 
-# Python / Caches
+# Python caches
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
 build/
-develop-eggs/
 dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
@@ -49,3 +39,6 @@ wheels/
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Numpy binary files (large, reproducible from scripts)
+*.npy
