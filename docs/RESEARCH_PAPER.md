@@ -463,15 +463,23 @@ Evaluated under strict Leave-One-Subject-Out validation, our temporal LightGBM m
 
 ## References
 
-1. **Berry, R. B., et al.** (2018). *The AASM Manual for the Scoring of Sleep and Associated Events: Rules, Terminology and Technical Specifications.* American Academy of Sleep Medicine.
-2. **Goldberger, A. L., et al.** (2000). PhysioBank, PhysioToolkit, and PhysioNet: Components of a new research resource for complex physiologic signals. *Circulation*, 101(23), e215–e220.
-3. **Danker-Hopfe, H., et al.** (2009). Inter-rater reliability for sleep scoring according to the Rechtschaffen & Kales and the new AASM standard. *Journal of Sleep Research*, 18(1), 74–84.
-4. **Ben Messaoud, M., et al.** (2024). PSG-IPA: A polysomnographic inter-scorer performance assessment database. *PhysioNet*. https://doi.org/10.13026/psg-ipa-1.0.0.
-5. **Ke, G., et al.** (2017). LightGBM: A highly efficient gradient boosting decision tree. *Advances in Neural Information Processing Systems (NeurIPS)*, 30, 3146–3154.
-6. **Lundberg, S. M., & Lee, S. I.** (2017). A unified approach to interpreting model predictions. *Advances in Neural Information Processing Systems (NeurIPS)*, 30, 4765–4774.
-7. **Hjorth, B.** (1970). EEG analysis based on time domain properties. *Electroencephalography and Clinical Neurophysiology*, 29(3), 306–310.
-8. **Pan, J., & Tompkins, W. J.** (1985). A real-time QRS detection algorithm. *IEEE Transactions on Biomedical Engineering*, (3), 230–236.
-9. **Chawla, N. V., et al.** (2002). SMOTE: Synthetic minority over-sampling technique. *Journal of Artificial Intelligence Research*, 16, 321–357.
-10. **Supratak, A., et al.** (2017). DeepSleepNet: A model for automatic sleep stage scoring based on raw single-channel EEG. *IEEE Transactions on Neural Systems and Rehabilitation Engineering*, 25(11), 1998–2008.
-11. **Vallat, R., & Walker, M. P.** (2021). An open-source, high-performance tool for automated sleep staging. *eLife*, 10, e70071.
-12. **Peppard, P. E., et al.** (2013). Increased prevalence of sleep-disordered breathing in adults. *American Journal of Epidemiology*, 177(9), 1006–1014.
+1. **Berry, R. B., Brooks, R., Gamaldo, C., Harding, S. M., Lloyd, R. M., Quan, S. F., Troester, M. T., & Vaughn, B. V.** (2018). *The AASM Manual for the Scoring of Sleep and Associated Events: Rules, Terminology and Technical Specifications.* Version 2.5. Darien, IL: American Academy of Sleep Medicine.
+2. **Goldberger, A. L., Amaral, L. A. N., Glass, L., Hausdorff, J. M., Ivanov, P. C., Mark, R. G., Mietus, J. E., Moody, G. B., Peng, C.-K., & Stanley, H. E.** (2000). PhysioBank, PhysioToolkit, and PhysioNet: Components of a new research resource for complex physiologic signals. *Circulation*, 101(23), e215–e220.
+3. **Ben Messaoud, M., O'Regan, S., Duman, R., & Landais, P.** (2024). PSG-IPA: A polysomnographic inter-scorer performance assessment database. *PhysioNet*. https://doi.org/10.13026/psg-ipa-1.0.0.
+4. **Danker-Hopfe, H., Anderer, P., Zeitlhofer, J., Boeck, M., Dorn, H., Gruber, G., Heller, E., Loretz, E., Montplaisir, J., Penczel, W., Röschke, J., Schäfer, K. E., Toussaint, M., & Saletu, B.** (2009). Inter-rater reliability for sleep scoring according to the Rechtschaffen & Kales and the new AASM standard. *Journal of Sleep Research*, 18(1), 74–84.
+5. **Rosenberg, R. S., & Van Hout, S.** (2013). The American Academy of Sleep Medicine inter-scorer reliability program: Sleep staging. *Journal of Clinical Sleep Medicine*, 9(1), 81–87.
+6. **Peppard, P. E., Young, T., Barnet, J. H., Palta, M., Hagen, E. W., & Hla, K. M.** (2013). Increased prevalence of sleep-disordered breathing in adults. *American Journal of Epidemiology*, 177(9), 1006–1014.
+7. **Supratak, A., Dong, H., Wu, C., & Guo, Y.** (2017). DeepSleepNet: A model for automatic sleep stage scoring based on raw single-channel EEG. *IEEE Transactions on Neural Systems and Rehabilitation Engineering*, 25(11), 1998–2008.
+8. **Phan, H., Andreotti, F., Cooray, N., Chén, O. Y., & De Vos, M.** (2019). SeqSleepNet: End-to-end hierarchical recurrent neural network for sequence-to-sequence automatic sleep staging. *IEEE Transactions on Neural Systems and Rehabilitation Engineering*, 27(3), 400–410.
+9. **Perslev, M., Jensen, M., Kalbhor, P., Jensen, J., Skovgaard, T., & Igel, C.** (2021). U-Sleep: Resilient high-frequency sleep staging. *npj Digital Medicine*, 4(1), 72.
+10. **Vallat, R., & Walker, M. P.** (2021). An open-source, high-performance tool for automated sleep staging. *eLife*, 10, e70071.
+11. **Chambon, S., Galtier, M. N., Arnal, P. J., Wainrib, G., & Gramfort, A.** (2018). A deep learning architecture for temporal sleep stage classification using multivariate and multimodal time series. *IEEE Transactions on Neural Systems and Rehabilitation Engineering*, 26(4), 758–769.
+12. **Malafeev, A., Laptev, D., Bauer, S., Omlin, X., Wenz, A., Marschall, D., Achermann, P., & Buhmann, J. M.** (2018). Automating sleep stage classification using deep neural networks. *Frontiers in Neuroscience*, 12, 781.
+13. **Penzel, T., Moody, G. B., Mark, R. G., Goldberger, A. L., & Peter, J. H.** (2000). The Apnea-ECG Database. *Computers in Cardiology*, 27, 255–258.
+14. **Hjorth, B.** (1970). EEG analysis based on time domain properties. *Electroencephalography and Clinical Neurophysiology*, 29(3), 306–310.
+15. **Pan, J., & Tompkins, W. J.** (1985). A real-time QRS detection algorithm. *IEEE Transactions on Biomedical Engineering*, BME-32(3), 230–236.
+16. **Tarvainen, M. P., Niskanen, J. P., Lipponen, J. A., Ranta-Aho, P. O., & Karjalainen, P. A.** (2014). Kubios HRV–heart rate variability analysis software. *Computer Methods and Programs in Biomedicine*, 113(1), 210–220.
+17. **Ke, G., Meng, Q., Finley, T., Wang, T., Chen, W., Ma, W., Ye, Q., & Liu, T. Y.** (2017). LightGBM: A highly efficient gradient boosting decision tree. *Advances in Neural Information Processing Systems (NeurIPS)*, 30, 3146–3154.
+18. **Lundberg, S. M., & Lee, S. I.** (2017). A unified approach to interpreting model predictions. *Advances in Neural Information Processing Systems (NeurIPS)*, 30, 4765–4774.
+19. **Chawla, N. V., Bowyer, K. W., Hall, L. O., & Kegelmeyer, W. P.** (2002). SMOTE: Synthetic minority over-sampling technique. *Journal of Artificial Intelligence Research*, 16, 321–357.
+20. **Landis, J. R., & Koch, G. G.** (1977). The measurement of observer agreement for categorical data. *Biometrics*, 33(1), 159–174.
