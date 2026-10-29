@@ -236,6 +236,7 @@ apnea-and-sleep-stage-detection/
 |   └── 07_Final_Benchmark.ipynb        Master reproducible LOSO benchmark (start here)
 |
 ├── docs/
+|   ├── RESEARCH_PAPER.md               Comprehensive academic manuscript (20 citations, full math)
 |   ├── brain.md                        Phase-by-phase project log and clinical findings
 |   ├── output.md                       Canonical numerical benchmark log
 |   ├── implementation_plan.md          Engineering design decisions and open questions
@@ -243,6 +244,22 @@ apnea-and-sleep-stage-detection/
 |   └── presentation/
 |       ├── presentation.pptx           9-slide executive presentation deck
 |       └── presentation.html           Interactive browser-based presentation
+|
+├── output_images/                      Comprehensive catalog of all 17 high-res project figures
+|   ├── 01–10_*.png                     Primary benchmark dashboards & architectural diagrams
+|   ├── README.md                       Visual catalog describing every figure & clinical purpose
+|   ├── eda/                            Per-signal diagnostic boxplots (ECG, EMG, Resp)
+|   └── monochrome/                     300 DPI publication-ready standalone monochromatic figures
+|       ├── 01_confusion_matrix_monochrome.png
+|       ├── 02_per_stage_f1_by_subject_monochrome.png
+|       ├── 03_overall_metrics_by_subject_monochrome.png
+|       ├── 04_shap_feature_importance_monochrome.png
+|       ├── 05_modality_ablation_monochrome.png
+|       ├── 06_apnea_auc_by_subject_monochrome.png
+|       ├── 07_apnea_f1_optimal_monochrome.png
+|       ├── 08_pipeline_progression_monochrome.png
+|       ├── 09_class_distribution_monochrome.png
+|       └── README.md                   Monochromatic catalog & print specifications
 |
 ├── psg_utils/                          Shared infrastructure package
 |   ├── repro.py                        Seed fixing and package version logging
@@ -279,6 +296,7 @@ apnea-and-sleep-stage-detection/
 ├── scripts/
 |   ├── run_temporal_lgbm.py            Phase 5 temporal feature engineering and LOSO
 |   ├── run_phase4_fixed.py             Phase 4 apnea consensus and gate fixes
+|   ├── generate_monochrome_single_plots.py  Generates 300 DPI standalone monochrome figures
 |   ├── generate_result_plots.py        Generates all plots in results/
 |   ├── fix_all_overlapping_figures.py  Generates all plots in figures/
 |   ├── build_refined_ppt.py            Builds docs/presentation/presentation.pptx
